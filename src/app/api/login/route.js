@@ -1,5 +1,6 @@
 import queryString from 'query-string';
 import { redirect } from 'next/navigation'
+import { NextRequest, NextResponse } from 'next/server';
 
 var REDIRECT_URI = process.env.REDIRECT_URI;
 var CLIENT_ID = process.env.CLIENT_ID;
@@ -13,7 +14,7 @@ export async function GET() {
     var state = generateRandomString(16);
     var scope =
         'user-read-private user-read-email user-top-read playlist-modify-public';
-    redirect(
+    const response = NextResponse.redirect(
         'https://accounts.spotify.com/authorize?' +
         queryString.stringify({
             response_type: 'code',
@@ -24,4 +25,6 @@ export async function GET() {
             show_dialog: true,
         })
     );
+
+    return response;
 }
