@@ -11,7 +11,8 @@ var REFRESH_TOKEN = process.env.REFRESH_TOKEN;
 
 "/api/callback"
 export async function GET(request) {
-  const response = NextResponse.redirect('http://localhost:3000/dashboard');
+  // const response = NextResponse.redirect('http://localhost:3000/dashboard');
+  const response = NextResponse.redirect('https://tunein-spotify.vercel.app/dashboard');
   const params = request.nextUrl.searchParams;
   var code = params.get("code");
   var state = params.get("state");
