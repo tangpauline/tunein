@@ -10,6 +10,7 @@ import Footer from '../components/footer';
 import { Work_Sans } from 'next/font/google';
 
 const font = Work_Sans({ subsets: ['latin'] });
+export const fetchCache = 'force-no-store';
 
 export default function Dashboard() {
     const [userProf, setUserProf] = useState({});
@@ -20,7 +21,6 @@ export default function Dashboard() {
     const routeLogout = async () => {
         // remove access token from cookies
         const res = await fetch("/api/logout", {method: 'POST'});
-        // document.cookie = 'access_token=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/api/token;';
 
         setAccessToken("");
         setUserProf({});

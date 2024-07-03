@@ -3,6 +3,7 @@ import './assets/home.css'
 import {useRouter} from "next/navigation";
 import Footer from './components/footer';
 
+export const fetchCache = 'force-no-store';
 
 export default function Home() {
   const router = useRouter();
