@@ -23,7 +23,7 @@ body {
     background: #513e66;
 }
 
-.header {
+.app-header {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -57,7 +57,7 @@ export default function Dashboard() {
         <main className={font.className}>
             <button className="logout-btn" onClick={routeLogout}>Log out</button>
 
-            <div className="header">
+            <div className="app-header">
                 <h1>TuneIn</h1>
                 <h2>Spotify Music Dashboard</h2>
             </div>
