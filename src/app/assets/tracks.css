@@ -1,0 +1,92 @@
+.tracks-container {
+    border-radius: 10px;
+    background: #1F2544;
+    width: 90%;
+    margin: 1em;
+    padding: 1em;
+}
+
+img {
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+    display:inline-block;
+}
+
+li {
+    /* display: flex; */
+    /* flex-direction: row; */
+    inline-size: auto;
+    margin: 1em;
+}
+
+/* .li-div {
+    display: inline-flex;
+    vertical-align: center;
+    inline-size: auto;
+    margin: 1em;
+} */
+
+.track-info {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    margin: 5px;
+    /* border: 1px solid red; */
+}
+
+.track-title {
+    color: white;
+    font-size: 15px;
+    overflow-wrap:break-word;
+    text-wrap:wrap;
+}
+
+.track-artist {
+    color: #a086be;
+    font-size: 12px;
+    overflow-wrap:break-word;
+}
+
+.time-ranges {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.time-btn {
+    background: #81689D;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.time-btn:hover {
+    background: #513e66 !important;
+}
+
+#sh-btn-t {
+    background: #513e66;
+}
+
+#sh-btn-a {
+    background: #513e66;
+}
+
+.playlist-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+}
+
+.save-playlist-btn {
+    border-radius: 10px;
+    background: #81689D;
+    padding: 1em;
+}
+
+.save-playlist-btn:hover {
+    background: #513e66;
+}
