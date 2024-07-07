@@ -1,5 +1,5 @@
 'use client'
-import '../assets/tracks.css'
+import '../assets/statslist.css'
 import {useState, useEffect} from 'react'
 import {getTopNItems} from '../utils/utils';
 
@@ -77,7 +77,7 @@ export default function Artists(access_token) {
                 artists.map((artist) => (
                     <li key={artist.name}>
                         <img src={artist.img}></img>
-                        <div className="track-info">
+                        <div className="item-info">
                             <p className="track-title">{artist.name}</p>
                         </div>
                     </li>

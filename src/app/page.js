@@ -14,12 +14,12 @@ export default function Home() {
 
   return (
     <main>
-      <button id="b1" onClick={routeLogin}>Log in</button>
+      <button className="login-btn" id="b1" onClick={routeLogin}>Log in</button>
       <div className="header">
         <h1>TuneIn</h1>
         <h2>Spotify Music Dashboard</h2>
-        <p>Log in to get started</p>
-        <button id="b2" onClick={routeLogin}>Log in</button>
+        <p className="login-desc">Log in to get started</p>
+        <button className="login-btn" id="b2" onClick={routeLogin}>Log in</button>
       </div>
       <Footer></Footer>
     </main>

@@ -1,5 +1,5 @@
 'use client'
-import '../assets/tracks.css'
+import '../assets/statslist.css'
 import {useState, useEffect} from 'react'
 import {getTopNItems, createPlaylist, addToPlaylist} from '../utils/utils';
 
@@ -111,10 +111,10 @@ export default function Tracks(params) {
                 tracks.map((track) => (
                     <li key={track.title}>
                         <img src={track.cover.url}></img>
-                        <div className="track-info">
+                        <div className="item-info">
                             <p className="track-title">{track.title}</p>
                             <p className="track-artist">{track.artist}</p>
-                        </div>
+                        </div> 
                     </li>
                 ))
                 }
