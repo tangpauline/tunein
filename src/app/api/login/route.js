@@ -1,5 +1,4 @@
 import queryString from 'query-string';
-import { redirect } from 'next/navigation'
 import { NextRequest, NextResponse } from 'next/server';
 
 var REDIRECT_URI = process.env.REDIRECT_URI;
@@ -26,6 +25,8 @@ export async function GET(request) {
             show_dialog: true,
         })
     );
+
+    response.headers.set("Cache-Control", "no-cache");
 
     return response;
 }

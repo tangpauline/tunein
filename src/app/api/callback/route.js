@@ -2,8 +2,6 @@ import queryString from 'query-string';
 import { redirect } from 'next/navigation';
 import { NextResponse } from 'next/server';
 
-
-
 var REDIRECT_URI = process.env.REDIRECT_URI;
 var CLIENT_ID = process.env.CLIENT_ID;
 var CLIENT_SECRET = process.env.CLIENT_SECRET;
@@ -43,7 +41,7 @@ export async function GET(request) {
     response.cookies.set('access_token', tokens.access_token, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== 'development',
-      maxAge: 60 * 60 * 24 * 7,
+      maxAge: 60 * 60 * 24,
       path: '/api/token',
     });
 

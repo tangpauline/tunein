@@ -52,3 +52,8 @@ h2 {
 .login-desc {
     text-align: center;
 }
+
+.login-desc-p {
+    text-align: center;
+    color: #dc6d6d;
+}
