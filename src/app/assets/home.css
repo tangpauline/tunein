@@ -21,9 +21,6 @@ body {
     background: #513e66;
 }
 
-#b1 {
-    position: absolute;
-}
 
 .header {
     display: flex;
@@ -56,4 +53,30 @@ h2 {
 .login-desc-p {
     text-align: center;
     color: #dc6d6d;
+}
+
+.back-btn {
+    border-radius: 10px;
+    background: #93899f;
+    padding: 10px;
+    margin: 10px;
+    right: 10px;
+    color: #FFD0EC;
+}
+
+.back-btn:hover {
+    background: #6d6578;
+}
+
+.proceed-btn {
+    border-radius: 10px;
+    background: #474F7A;
+    padding: 10px;
+    margin: 10px;
+    right: 10px;
+    color: #FFD0EC;
+}
+
+.proceed-btn:hover {
+    background: #343a5c;
 }
