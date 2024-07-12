@@ -15,7 +15,7 @@ TuneIn is a web application that utilizes the Spotify Web API to provide users w
 ## Installation
 ### Clone the Repository:
 ```
-git clone https://github.com/your-username/tunein.git
+git clone https://github.com/tangpauline/tunein.git
 cd tunein
 ```
 
@@ -38,3 +38,11 @@ npm run dev
 ```
 
 Open http://localhost:3000 with your browser to see the application in action.
+
+## Images
+### Homepage
+![Homepage image](./public/tunein-img-home.png)
+
+### Dashboard
+![Dashboard image 1](./public/tunein-img-dashboard1.png)
+![Dashboard image 2](./public/tunein-img-dashboard2.png)
