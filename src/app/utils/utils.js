@@ -53,8 +53,8 @@ export async function createPlaylist(access_token, user_id) {
             'content-type': 'application/json',
         },
         body: JSON.stringify({
-            'name': 'TuneIn New Playlist',
-            'description': 'New playlist created using TuneIn :)'
+            'name': 'TuneIn Top Tracks',
+            'description': 'Playlist created using TuneIn :)'
         })
     }
 
