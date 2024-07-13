@@ -38,14 +38,14 @@ export default function Dashboard() {
 
             // if no access token is fetched, re-route to home login page
             if (data.access_token == undefined) {
-                window.alert("Please sign in and re-authorize to continue.")
+                window.alert("Please sign in and re-authorize to continue, or contact the owner at tangpauline1@gmail.com for access.")
                 router.push("/");
             } else {
                 setAccessToken(data.access_token.value);
                 // access user data
                 const userProfile = await getUserProfile(data.access_token.value);
                 if (userProfile === undefined) {
-                    window.alert("Please sign in and re-authorize to continue.")
+                    window.alert("Please sign in and re-authorize to continue, or contact the owner at tangpauline1@gmail.com for access.")
                     router.push("/");
                 } else {
                     setUserProf(userProfile);

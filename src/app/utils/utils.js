@@ -54,7 +54,7 @@ export async function createPlaylist(access_token, user_id) {
         },
         body: JSON.stringify({
             'name': 'TuneIn Top Tracks',
-            'description': 'Playlist created using TuneIn :)'
+            'description': 'Playlist created using TuneIn! Check it out at https://tunein-music.vercel.app/ :)'
         })
     }
 
