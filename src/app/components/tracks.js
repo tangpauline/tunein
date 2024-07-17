@@ -6,6 +6,7 @@ import html2canvas from 'html2canvas';
 
 export default function Tracks(params) {
     const [tracks, setTracks] = useState({});
+    const [timeClicked, setTimeClicked] = useState("sh");
 
     const shBtn = document.getElementById("sh-btn-t");
     const meBtn = document.getElementById("me-btn-t");
@@ -40,6 +41,8 @@ export default function Tracks(params) {
         shBtn.style.background = "#513e66";
         meBtn.style.background = "#81689D";
         loBtn.style.background = "#81689D";
+
+        setTimeClicked("sh");
     }
 
     // 6 months clicked
@@ -55,6 +58,8 @@ export default function Tracks(params) {
         shBtn.style.background = "#81689D";
         meBtn.style.background = "#513e66";
         loBtn.style.background = "#81689D";
+
+        setTimeClicked("me");
     }
 
     // 1 year clicked
@@ -70,6 +75,8 @@ export default function Tracks(params) {
         shBtn.style.background = "#81689D";
         meBtn.style.background = "#81689D";
         loBtn.style.background = "#513e66";
+
+        setTimeClicked("lo");
     }
 
     // save as playlist
@@ -100,17 +107,14 @@ export default function Tracks(params) {
     const saveImage = () => {
         const compClone = document.querySelector('#top-tracks').cloneNode(true);
         
-        // remove times buttons
+        // save and remove times buttons
         const times = compClone.childNodes[1];
         compClone.removeChild(times);
         
         // remove album cover images
         const tracks = compClone.getElementsByTagName("li");
-        console.log(tracks);
         for (let t = 0; t < tracks.length; t++) {
-            console.log(tracks[t]);
             const albumImg = tracks[t].childNodes[0];
-            console.log(albumImg);
             tracks[t].removeChild(albumImg);
         }
 
@@ -128,7 +132,15 @@ export default function Tracks(params) {
         h2.style.fontSize = "30px";
         h2.style.color="#C09FCD";
         const p2 = document.createElement("p");
-        p2.innerText = "This Past Month";
+
+        if (timeClicked == "sh") {
+            p2.innerText = "This Past Month";
+        } else if (timeClicked == "me") {
+            p2.innerText = "The Past 6 Month";
+        } else {
+            p2.innerText = "This Past Year";
+        }
+
         p2.style.textAlign = "center";
         p2.style.color = "#C09FCD"
         compClone.insertBefore(h1, h2);
