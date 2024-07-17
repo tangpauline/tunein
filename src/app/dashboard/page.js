@@ -76,8 +76,8 @@ export default function Dashboard() {
             
             {userProf && userProf.id && 
                 (<div className="top-container">
-                    <Tracks access_token={access_token} user_id={userProf.id}></Tracks>
-                    <Artists access_token={access_token}></Artists>
+                    <Tracks access_token={access_token} user_id={userProf.id} user_name={userProf.display_name}></Tracks>
+                    <Artists access_token={access_token} user_name={userProf.display_name}></Artists>
                 </div>)
             }
 
