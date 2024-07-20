@@ -70,6 +70,7 @@ export default function Artists(params) {
         setTimeClicked("lo");
     }
 
+    // save top artists as PNG image
     const saveImage = () => {
         const compClone = document.querySelector('#top-artists').cloneNode(true);
         
@@ -101,7 +102,7 @@ export default function Artists(params) {
         if (timeClicked == "sh") {
             p2.innerText = "This Past Month";
         } else if (timeClicked == "me") {
-            p2.innerText = "The Past 6 Month";
+            p2.innerText = "The Past 6 Months";
         } else {
             p2.innerText = "This Past Year";
         }

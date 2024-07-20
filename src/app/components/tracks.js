@@ -104,6 +104,7 @@ export default function Tracks(params) {
 
     }
 
+    // save top tracks as PNG image
     const saveImage = () => {
         const compClone = document.querySelector('#top-tracks').cloneNode(true);
         
@@ -136,7 +137,7 @@ export default function Tracks(params) {
         if (timeClicked == "sh") {
             p2.innerText = "This Past Month";
         } else if (timeClicked == "me") {
-            p2.innerText = "The Past 6 Month";
+            p2.innerText = "The Past 6 Months";
         } else {
             p2.innerText = "This Past Year";
         }
