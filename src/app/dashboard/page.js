@@ -66,7 +66,7 @@ export default function Dashboard() {
 
             <div className="user-header">
                 {userProf && userProf.images &&
-                    (<img className="user-img" src={userProf.images[1].url}></img>)
+                    (<img className="user-img" src={userProf.images[0].url}></img>)
                 }
                 {userProf.display_name && 
                     (<h3>Welcome, {userProf.display_name}</h3>)

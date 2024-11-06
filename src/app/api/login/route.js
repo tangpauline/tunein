@@ -10,7 +10,6 @@ function generateRandomString(num) {
 
 "/api/login"
 export async function GET(request) {
-    console.log("get request, login");
     var state = generateRandomString(16);
     var scope =
         'user-read-private user-read-email user-top-read playlist-modify-public';
